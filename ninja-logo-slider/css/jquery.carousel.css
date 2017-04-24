@@ -1,0 +1,204 @@
+/**
+ * carouselSlider v4.1.2 - Fully loaded, responsive content slider
+ * http://carouselslider.com
+ *
+ * Written by: Steven Wanderski, 2014
+ * http://stevenwanderski.com
+ * (while drinking Belgian ales and listening to jazz)
+ *
+ * CEO and founder of carouselCreative, LTD
+ * http://carouselcreative.com
+ */
+
+
+/** RESET AND LAYOUT
+===================================*/
+
+.carousel-wrapper {
+	position: relative;
+	margin: 0 auto 60px;
+	padding: 0;
+	*zoom: 1;
+}
+
+.carousel-wrapper img {
+	max-width: 100%;
+	display: block;
+}
+
+/** THEME
+===================================*/
+
+.carousel-wrapper .carousel-viewport {
+	/*-moz-box-shadow: 0 0 5px #ccc;
+	-webkit-box-shadow: 0 0 5px #ccc;
+	box-shadow: 0 0 5px #ccc;
+	border:  5px solid #fff;
+	left: -5px;
+	background: #fff;*/
+	
+	/*fix other elements on the page moving (on Chrome)*/
+	-webkit-transform: translatez(0);
+	-moz-transform: translatez(0);
+    	-ms-transform: translatez(0);
+    	-o-transform: translatez(0);
+    	transform: translatez(0);
+}
+
+.carousel-wrapper .carousel-pager,
+.carousel-wrapper .carousel-controls-auto {
+	position: absolute;
+	bottom: -30px;
+	width: 100%;
+}
+
+/* LOADER */
+
+.carousel-wrapper .carousel-loading {
+	min-height: 50px;
+	background: url(images/carousel_loader.gif) center center no-repeat #fff;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2000;
+}
+
+/* PAGER */
+
+.carousel-wrapper .carousel-pager {
+	text-align: center;
+	font-size: .85em;
+	font-family: Arial;
+	font-weight: bold;
+	color: #666;
+	padding-top: 20px;
+}
+
+.carousel-wrapper .carousel-pager .carousel-pager-item,
+.carousel-wrapper .carousel-controls-auto .carousel-controls-auto-item {
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+}
+
+.carousel-wrapper .carousel-pager.carousel-default-pager a {
+	background: #666;
+	text-indent: -9999px;
+	display: block;
+	width: 10px;
+	height: 10px;
+	margin: 0 5px;
+	outline: 0;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.carousel-wrapper .carousel-pager.carousel-default-pager a:hover,
+.carousel-wrapper .carousel-pager.carousel-default-pager a.active {
+	background: #000;
+}
+
+/* DIRECTION CONTROLS (NEXT / PREV) */
+
+.carousel-wrapper .carousel-prev {
+	left: 10px;
+	background: url(images/controls.png) no-repeat 0 -32px;
+}
+
+.carousel-wrapper .carousel-next {
+	right: 10px;
+	background: url(images/controls.png) no-repeat -43px -32px;
+}
+
+.carousel-wrapper .carousel-prev:hover {
+	background-position: 0 0;
+}
+
+.carousel-wrapper .carousel-next:hover {
+	background-position: -43px 0;
+}
+
+.carousel-wrapper .carousel-controls-direction a {
+	position: absolute;
+	top: 50%;
+	margin-top: -16px;
+	outline: 0;
+	width: 32px;
+	height: 32px;
+	text-indent: -9999px;
+	z-index: 9999;
+}
+
+.carousel-wrapper .carousel-controls-direction a.disabled {
+	display: none;
+}
+
+/* AUTO CONTROLS (START / STOP) */
+
+.carousel-wrapper .carousel-controls-auto {
+	text-align: center;
+}
+
+.carousel-wrapper .carousel-controls-auto .carousel-start {
+	display: block;
+	text-indent: -9999px;
+	width: 10px;
+	height: 11px;
+	outline: 0;
+	background: url(images/controls.png) -86px -11px no-repeat;
+	margin: 0 3px;
+}
+
+.carousel-wrapper .carousel-controls-auto .carousel-start:hover,
+.carousel-wrapper .carousel-controls-auto .carousel-start.active {
+	background-position: -86px 0;
+}
+
+.carousel-wrapper .carousel-controls-auto .carousel-stop {
+	display: block;
+	text-indent: -9999px;
+	width: 9px;
+	height: 11px;
+	outline: 0;
+	background: url(images/controls.png) -86px -44px no-repeat;
+	margin: 0 3px;
+}
+
+.carousel-wrapper .carousel-controls-auto .carousel-stop:hover,
+.carousel-wrapper .carousel-controls-auto .carousel-stop.active {
+	background-position: -86px -33px;
+}
+
+/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+
+.carousel-wrapper .carousel-controls.carousel-has-controls-auto.carousel-has-pager .carousel-pager {
+	text-align: left;
+	width: 80%;
+}
+
+.carousel-wrapper .carousel-controls.carousel-has-controls-auto.carousel-has-pager .carousel-controls-auto {
+	right: 0;
+	width: 35px;
+}
+
+/* IMAGE CAPTIONS */
+
+.carousel-wrapper .carousel-caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: #666\9;
+	background: rgba(80, 80, 80, 0.75);
+	width: 100%;
+}
+
+.carousel-wrapper .carousel-caption span {
+	color: #fff;
+	font-family: Arial;
+	display: block;
+	font-size: .85em;
+	padding: 10px;
+}
